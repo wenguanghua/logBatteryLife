@@ -34,7 +34,7 @@ import com.extbcr.scannersdk.EventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = "tpBattery";
+    public static final String TAG = "tpBatteryLife";
 
     TextView textViewStatus;
     TextView textViewHealth;
