@@ -5,28 +5,26 @@ memo_tpBatteryLife
 # 機能
 
 ## バッテリ情報を取得
-　パワーステタースとバッテリ情報の取得と表示  
-  status,level,plugged,voltage,temperature   ==> broadcast  
+・パワーステタース：  
+　status,level,plugged,voltage,temperature   ==> broadcast  
 
-  currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow   ==>Polling  
+・バッテリ情報：
+　currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow   ==>Polling  
 
 ## 読取  
-　一定間隔でバーコードを読取する（初期値は５秒）  
+一定間隔でバーコードを読取する（初期値は５秒）  
 
 ## 記録  
-　上記情報をlogする：  
+上記情報をlogする：  
   storage>self>primary>Android>data>w.tpbatteryLife>files>logBatteryLife.txt  
-
+・開始するときのlog：  
+　・currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow  
+　・開始時のスクリーンの明るさ  
+・途中記録内容  
   count,date,status,level,plugged,voltage,temperature  
-　・開始するときのlog：  
-　　・開始時刻  
-　　・開始時のバッテリー条件・状態  
-	　currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow  
-　　・開始時のスクリーンの明るさ  
 
-　・終了時点のlog  
-　　・終了時刻  
-　　・経過時間  
+・終了時点のlog  
+　終了時刻と経過時間  
 
 ## 設定
 　バーコードスキャン間隔（初期値：5秒）  
@@ -63,17 +61,19 @@ memo_tpBatteryLife
 　そうしないとituBroadcastするかわからないので、crash発生する可能性がある。  
 
 ## Airplaneモード
-　設定する場合、permission追加が必要  
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />  
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />  
+  
+　設定する場合、permission追加が必要  
 
 ## 無線モード
-  設定する場合、permission追加が必要  
     <uses-permission android:name="android.permission.BLUETOOTH"/>  
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>  
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
     <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS "/>  
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+  
+  設定する場合、permission追加が必要  
 
 
 ## sign
