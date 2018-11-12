@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_scan"
+        android:title="Barcode reader" />
+
+    <EditTextPreference
+        android:defaultValue="5"
+        android:key="edit_scanInterval"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Scan interval (1~60s)" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_log"
+        android:title="Log battery state" />
+
+    <ListPreference
+        android:key="list_logTiming"
+        android:title="Log timing"
+        android:entries="@array/logTimingListEntry"
+        android:entryValues="@array/logTimingListValues"
+        android:defaultValue="1" />
+
+    <EditTextPreference
+        android:defaultValue="60"
+        android:key="edit_loggingInterval"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Logging interval (60~3600 s)" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_autorun"
+        android:title="Auto run after reboot" />
+
+</PreferenceScreen>

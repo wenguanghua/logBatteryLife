@@ -1,0 +1,2 @@
+java -jar C:\2018\H-28\tp\sign_apk\signapk.jar -w C:\2018\H-28\tp\sign_apk\platform.x509.pem C:\2018\H-28\tp\sign_apk\platform.pk8 C:\2018\H-28\tp\tpBatteryLife\app\build\outputs\apk\debug\app-debug.apk C:\2018\H-28\tp\tpBatteryLife\app\build\outputs\apk\debug\app-debug-sign.apk
+adb install -r C:\2018\H-28\tp\tpBatteryLife\app\build\outputs\apk\debug\app-debug-sign.apk

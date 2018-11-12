@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">tpBatteryLife</string>
+    <string name="button_start_test">Start test</string>
+    <string name="buttno_stop_test">Stop test</string>
+    <string name="testing_start">testing start...</string>
+    <string name="testing_stop">testing stopped!</string>
+    <string name="scan_disabled">scan is disabled</string>
+    <string name="scan_enabled">scan is enabled</string>
+    <string name="test_title">Test battery life with periodic action</string>
+    <string name="test_hint">Press [START TEST] button to start test</string>
+    <string name="log_disabled">Logging is disabled.</string>
+    <string name="log_polling">Logging is enabled, interval is </string>
+    <string name="log_broadcast">Logging while the power state changed</string>
+
+</resources>

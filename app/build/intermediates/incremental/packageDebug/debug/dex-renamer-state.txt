@@ -1,0 +1,4 @@
+#Mon Nov 12 13:43:45 JST 2018
+base.0=C\:\\2018\\H-28\\tp\\tpBatteryLife\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
