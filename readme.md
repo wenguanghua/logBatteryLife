@@ -5,36 +5,32 @@ memo_tpBatteryLife
 # 機能
 
 ## バッテリ情報を取得
-・パワーステタース：  
+・パワーステタース：
 　status,level,plugged,voltage,temperature   ==> broadcast  
-
 ・バッテリ情報：
-　currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow   ==>Polling  
+　currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow  
 
 ## 読取  
 一定間隔でバーコードを読取する（初期値は５秒）  
 
 ## 記録  
 上記情報をlogする：  
-  storage>self>primary>Android>data>w.tpbatteryLife>files>logBatteryLife.txt  
+　storage>self>primary>Android>data>w.tpbatteryLife>files>logBatteryLife.txt  
 ・開始するときのlog：  
 　・currentNow,chargeCycle,chargeFull,chargeFullDesign,chargeNow  
-　・開始時のスクリーンの明るさ  
-・途中記録内容  
-  count,date,status,level,plugged,voltage,temperature  
-
-・終了時点のlog  
-　終了時刻と経過時間  
+　・開始時のスクリーンの明るさや読取の有無  
+・途中記録内容：count,date,status,level,plugged,voltage,temperature  
+・終了時点のlog：終了時刻と経過時間  
 
 ## 設定
-　バーコードスキャン間隔（初期値：5秒）  
-　LogのEnabled/Disableb  
-　Loggingのタイミング選択  
-　スキャンするとき  
+・バーコードスキャン間隔（初期値：5秒）  
+・LogのEnabled/Disableb  
+・Loggingのタイミング選択  
+・スキャンするとき  
 　・定期的  
 　・バッテリー状態変化があるとき  
-　Logの間隔（default:60秒）  
-　reboot後自動起動するかを選択可　＝＞残量0から記録可能に  
+・Logの間隔（default:60秒）  
+・reboot後自動起動するかを選択可　＝＞残量0から記録可能に  
 
 ## 環境設定
 ・テスト起動時スクリーン輝度を最小限に設定  
