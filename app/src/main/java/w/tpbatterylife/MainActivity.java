@@ -682,7 +682,7 @@ public class MainActivity extends AppCompatActivity {
         long endTime = System.currentTimeMillis();
         long diffTime = (endTime - startTime);
         long hh = diffTime / 1000 / (60 * 60); // 時
-        long mm = diffTime / 1000 / 60; // 分
+        long mm = (diffTime / 1000 / 60) % 60; // 分
         long ss = diffTime / 1000 % 60; // 秒
         return String.format(Locale.JAPAN,"%d:%02d:%02d", hh, mm, ss);
     }
