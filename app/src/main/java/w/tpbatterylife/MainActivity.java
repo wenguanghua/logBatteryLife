@@ -215,16 +215,20 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Log.d(TAG, "onResume");
         updateFuelGaugeInfo();
-        initScan();
+        if (scanEnabled) {
+            initScan();
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
-        deinitScan();
         stopTest();
         intervalHandler.removeCallbacks(runnable);
+        if (scanEnabled) {
+            deinitScan();
+        }
     }
 
     private void startTest() {
